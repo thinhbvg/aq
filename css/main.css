@@ -1081,11 +1081,170 @@ h5 {
     height: 350px;
     background-color: #0083DD;
     color: #fff;
+    display: table;
 }
 
 .aq-awards-box {
     width: 25%;
     float: left;
+    display: table-cell;
+    text-align: center;
     height: 100%;
-    line-height: 100%;
+}
+
+.aq-awards-box:hover {
+    background-color: #0071CC;
+}
+
+.aq-awards-box:hover .aq-awards-span {
+    border-bottom: 1px solid #208CE9;
+    border-top: 1px solid #208CE9;
+}
+
+.aq-awards-box img {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.aq-awards-span {
+    padding: 20px 0;
+    border-bottom: 1px solid #0071DA;
+    border-top: 1px solid #0071DA;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.aq-awards-span span {
+    display: block;
+}
+
+.aq-awards-box> span {
+    font-size: 5em;
+}
+
+.aq-footer {
+    width: 100%;
+}
+
+.aq-footer-left {
+    float: left;
+    width: 50%;
+    background-color: #eee;
+    height: 350px;
+}
+
+.aq-footer-left-wrapper {
+    width: 80%;
+    margin: 80px auto;
+}
+
+.aq-footer-left-wrapper h5 {
+    color: #0083DD;
+    text-align: left;
+}
+
+.aq-footer-left-wrapper p {
+    color: #ccc;
+}
+
+.aq-footer-icon {
+    color: #0083DD;
+    position: relative;
+    width: 100px;
+}
+
+.icon-right {
+    position: absolute;
+    top: 3px;
+    left: 30px;
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.aq-footer-icon:hover .icon-right {
+    left: 50px;
+    opacity: 1;
+}
+
+.aq-footer-right {
+    background-color: #fff;
+    height: 350px;
+    float: left;
+    width: 50%;
+}
+
+.aq-footer-right-wrapper {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.aq-footer-right-wrapper p {
+    float: left;
+    width: 50%;
+    color: #ccc;
+}
+
+.aq-footer-right-wrapper h5 {
+    color: #0083DD;
+}
+
+.aq-footer-icon-1 {
+    position: relative;
+    color: #0083DD;
+    width: 150px;
+    top: 50%;
+    left: 80%;
+}
+
+.gg-map {
+    position: absolute;
+    left: 85px;
+    bottom: 3px;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.aq-footer-icon-1:hover .gg-map {
+    opacity: 1;
+    left: 100px;
+}
+
+.aq-footer-icon-2 {
+    position: relative;
+    color: #0083DD;
+    width: 150px;
+    top: 23px;
+}
+
+.contact-us {
+    position: absolute;
+    top: 3px;
+    left: 70px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.aq-footer-icon-2:hover .contact-us {
+    opacity: 1;
+    left: 90px;
+}
+
+.aq-footer-icon-3 {
+    position: relative;
+    color: #0083DD;
+    width: 150px;
+    left: 200px;
+}
+
+.gg-map-2 {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+    top: 2px;
+    left: 85px;
+}
+
+.aq-footer-icon-3:hover .gg-map-2 {
+    opacity: 1;
+    left: 105px;
 }
