@@ -195,6 +195,9 @@ textarea {
     float: left;
     line-height: 60px;
     text-align: center;
+    margin-left: 20px;
+    transition: all 0.5s;
+    opacity: 0;
 }
 
 .aq-bar-menu span {
@@ -418,16 +421,21 @@ textarea {
     width: 100%;
     height: 600px;
     position: relative;
+    background-position: 0 -500px;
+    transition: all 1s;
 }
 
 .aq-detail-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-100%);
     color: #fff;
     text-transform: uppercase;
     width: 400px;
+    visibility: hidden;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
 }
 
 .muller {
@@ -470,6 +478,9 @@ textarea {
 .aq-digital {
     float: left;
     width: 50%;
+    position: relative;
+    top: 100px;
+    transition: all 0.5s;
 }
 
 .aq-digital h5 {
@@ -493,7 +504,8 @@ textarea {
     background-position: -30px;
     background-repeat: no-repeat;
     backface-visibility: hidden;
-    transition: all 0.3s;
+    transition: all 0.5s;
+    top: 100px;
 }
 
 .aq-assos:hover {
@@ -552,9 +564,9 @@ textarea {
     background-size: cover;
     background-position: -30px;
     position: relative;
-    top: -300px;
+    top: -100px;
     height: 700px;
-    transition: all 0.3s;
+    transition-duration: 0.5s;
 }
 
 .aq-palzileri:hover {
@@ -621,8 +633,10 @@ h5 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -40px;
-    transition: all 0.3s;
+    transition-duration: 0.3s;
     position: relative;
+    top: 200px;
+    left: 0;
 }
 
 .aq-scruud-background {
@@ -661,14 +675,14 @@ h5 {
 .aq-mediaset {
     position: absolute;
     left: 0;
-    top: 1100px;
+    top: 1250px;
     width: 50%;
     background-image: url(../img/mediaset.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -40px;
     height: 400px;
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 
 .aq-mediaset:hover {
@@ -704,6 +718,9 @@ h5 {
     background-position: -40px;
     transition: all 0.2s;
     position: relative;
+    top: 150px;
+    left: 0;
+    transition: all 0.5s;
 }
 
 .aq-ferrari:hover {
@@ -735,7 +752,7 @@ h5 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -40px;
-    top: 1500px;
+    top: 1650px;
     left: 0;
     width: 50%;
     height: 800px;
@@ -779,7 +796,9 @@ h5 {
     background-position: -40px;
     height: 400px;
     position: relative;
-    transition: all 0.2s;
+    transition: all 0.5s;
+    top: 150px;
+    left: 0;
 }
 
 .aq-something:hover {
@@ -817,7 +836,7 @@ h5 {
 
 .aq-citco {
     position: absolute;
-    top: 2300px;
+    top: 2450px;
     left: 0;
     width: 50%;
     height: 400px;
@@ -825,7 +844,7 @@ h5 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -40px;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 .aq-citco:hover {
@@ -859,7 +878,7 @@ h5 {
 .aq-loadmore {
     position: absolute;
     left: 50%;
-    top: 2300px;
+    top: 2450px;
     background-repeat: no-repeat;
     background-size: cover;
     animation-name: change-img;
@@ -868,6 +887,7 @@ h5 {
     animation-play-state: paused;
     width: 50%;
     height: 400px;
+    transition-duration: 0.5s;
 }
 
 .aq-loadmore:hover {
@@ -954,6 +974,12 @@ h5 {
 .aq-stay-with-us span {
     text-align: left !important;
     color: #ccc;
+}
+
+.aq-social {
+    position: relative;
+    top: 150px;
+    left: 0;
 }
 
 .aq-social-box {
@@ -1049,11 +1075,58 @@ h5 {
 
 .number-plus {
     color: #0083DD;
-    font-size: 10em;
     font-weight: bold;
     line-height: normal;
     vertical-align: middle;
     display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 0;
+    transition: all 0.5s;
+    opacity: 1;
+    width: 350px;
+    height: 100%;
+}
+
+.number-plus h2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+}
+
+.number-5 {
+    position: absolute;
+    top: -200px;
+    left: 120px;
+    transition-duration: 1s;
+    opacity: 0;
+}
+
+.number-plus h2 span {
+    font-size: 8em;
+}
+
+.number-plus h2> span:nth-child(2) {
+    position: absolute;
+    top: -200px;
+    left: 220px;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+    opacity: 0;
+}
+
+.number-plus h2> span:nth-child(2):after {
+    content: "+";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 90px;
+    font-size: 60px !important;
+    box-shadow:
 }
 
 .aq-text-reasons {
@@ -1079,9 +1152,9 @@ h5 {
 .aq-awards {
     width: 100%;
     height: 350px;
-    background-color: #0083DD;
     color: #fff;
     display: table;
+    position: relative;
 }
 
 .aq-awards-box {
@@ -1090,6 +1163,31 @@ h5 {
     display: table-cell;
     text-align: center;
     height: 100%;
+    position: absolute;
+    top: 100%;
+    background-color: #0083DD;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.aq-awards-box:nth-of-type(1) {
+    left: 0%;
+    transition-delay: 0s;
+}
+
+.aq-awards-box:nth-of-type(2) {
+    left: 25%;
+    transition-delay: 0.1s;
+}
+
+.aq-awards-box:nth-of-type(3) {
+    left: 50%;
+    transition-delay: 0.2s;
+}
+
+.aq-awards-box:nth-of-type(4) {
+    left: 75%;
+    transition-delay: 0.3s;
 }
 
 .aq-awards-box:hover {
@@ -1112,6 +1210,10 @@ h5 {
     border-top: 1px solid #0071DA;
     width: 50%;
     margin: 0 auto;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition-duration: 1s;
+    visibility: hidden;
 }
 
 .aq-awards-span span {
@@ -1248,3 +1350,5 @@ h5 {
     opacity: 1;
     left: 105px;
 }
+
+@keyframes move-up {}

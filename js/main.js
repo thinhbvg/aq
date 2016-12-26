@@ -43,6 +43,26 @@ $('.aq-bar-menu').hover(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.aq-big-img').css({
+        'background-position': '0 0'
+    });
+    $('.aq-detail-wrapper').css({
+        'visibility': 'visible',
+        'transform': 'translateY(-50%)'
+    });
+    $('.aq-assos').css({
+        'top': 0
+    });
+    $('.aq-digital').css({
+        'top': 0
+    });
+    $('.aq-bar-logo').css({
+        'margin-left': 0,
+        'opacity': 1
+    });
+});
+
 $('.aq-bar-menu').click(function () {
     $('.aq-overlay-wrapper').fadeIn();
 
@@ -122,4 +142,108 @@ $('.aq-palzileri').hover(function () {
         'transition-duration': '1s',
         'opacity': 1
     });
+});
+
+$(window).scroll(function () {
+    var window_top = $(window).scrollTop();
+    var window_bottom = $(window).scrollTop() + $(window).height();
+    if (window_bottom >= $('.aq-palzileri').offset().top) {
+        $('.aq-palzileri').css({
+            'top': '-300px'
+        });
+    }
+
+    if (window_bottom >= $('.aq-scruud').offset().top) {
+        $('.aq-scruud').css({
+            'top': 0
+        })
+    }
+
+    if (window_bottom >= $('.aq-mediaset').offset().top) {
+        $('.aq-mediaset').css({
+            'top': '1100px'
+        });
+        $('.aq-ferrari').css({
+            'top': 0
+        });
+    }
+
+    if (window_bottom >= $('.aq-fornasetti').offset().top) {
+        $('.aq-fornasetti').css({
+            'top': '1500px'
+        });
+    }
+
+    if (window_bottom >= $('.aq-something').offset().top) {
+        $('.aq-something').css({
+            'top': 0
+        });
+    }
+
+    if (window_bottom >= $('.aq-citco').offset().top) {
+        $('.aq-citco').css({
+            'top': '2300px'
+        });
+
+        $('.aq-loadmore').css({
+            'top': '2300px'
+        });
+    }
+
+    if (window_bottom >= $('.aq-social').offset().top) {
+        $('.aq-social').css({
+            'top': 0
+        });
+    }
+
+    if (window_bottom >= $('.number-plus').offset().top) {
+        $('.number-5').css({
+            'opacity': 1,
+            'top': 0
+        });
+        $('.number-0').css({
+            'opacity': 1,
+            'top': 0
+        });
+    }
+
+    if (window_bottom >= $('.aq-awards').offset().top + 20) {
+        $('.aq-awards-box').css({
+            'top': 0,
+            'opacity': 1
+        });
+
+        $('.aq-awards-span').css({
+            'opacity': 1,
+            'visibility': 'visible'
+        });
+
+        $('.count').each(function () {
+            if (parseInt($('.aq-awards-box').css('opacity')) < 1) {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 3000,
+                    easing: 'swing',
+                    step: function () {
+                        $(this).text(Math.ceil(this.Counter));
+                    }
+                });
+            }
+            $(window).off();
+        });
+
+
+    }
+    /*var i = 0;
+                    var count = setInterval(function () {
+                    console.log(parseInt($eachNumber.text()));
+                    if (i <= parseInt($eachNumber.text())) {
+                        $eachNumber.text(i++);
+                    } else {
+                        i = 0;
+                        clearInterval(count);
+                    }
+                    }, 200);*/
+
 });
